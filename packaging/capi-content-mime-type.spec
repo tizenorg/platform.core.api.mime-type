@@ -2,22 +2,20 @@ Name:       capi-content-mime-type
 Summary:    A MIME type library in Tizen C API
 Version:    0.0.2
 Release:    2
-Group:      TO_BE/FILLED_IN
-License:    TO BE FILLED IN
+Group:      APIs
+License:    Apache-2.0
 Source0:    %{name}-%{version}.tar.gz
 BuildRequires:  cmake
 BuildRequires:  pkgconfig(dlog)
 BuildRequires:  pkgconfig(capi-base-common)
 BuildRequires:  pkgconfig(xdgmime)
-Requires(post): /sbin/ldconfig  
-Requires(postun): /sbin/ldconfig
 
 %description
 
 
 %package devel
 Summary:  A MIME type library in Tizen C API (Development)
-Group:    TO_BE/FILLED_IN
+Group:    APIs
 Requires: %{name} = %{version}-%{release}
 Requires:  pkgconfig(capi-base-common)
 
@@ -30,7 +28,7 @@ Requires:  pkgconfig(capi-base-common)
 
 %build
 MAJORVER=`echo %{version} | awk 'BEGIN {FS="."}{print $1}'`  
-cmake . -DCMAKE_INSTALL_PREFIX=/usr -DFULLVER=%{version} -DMAJORVER=${MAJORVER} 
+%cmake .  -DFULLVER=%{version} -DMAJORVER=${MAJORVER} 
 
 
 make %{?jobs:-j%jobs}
