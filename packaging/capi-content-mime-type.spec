@@ -5,6 +5,7 @@ Release:    2
 Group:      APIs
 License:    Apache-2.0
 Source0:    %{name}-%{version}.tar.gz
+Source1001: 	capi-content-mime-type.manifest
 BuildRequires:  cmake
 BuildRequires:  pkgconfig(dlog)
 BuildRequires:  pkgconfig(capi-base-common)
@@ -24,6 +25,7 @@ Requires:  pkgconfig(capi-base-common)
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 
 %build
@@ -43,10 +45,12 @@ rm -rf %{buildroot}
 
 
 %files
+%manifest %{name}.manifest
 %{_libdir}/lib*.so.*
 %manifest capi-content-mime-type.manifest
 
 %files devel
+%manifest %{name}.manifest
 %{_includedir}/content/*.h
 %{_libdir}/pkgconfig/*.pc
 %{_libdir}/lib*.so
