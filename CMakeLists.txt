@@ -87,7 +87,7 @@ ADD_CUSTOM_COMMAND(
         -name install_manifest.txt -or
         -name *.pc -or
         -name *~ \)
-        | grep -v TC | xargs rm -rf
+        | xargs rm -rf
         TARGET  distclean
         VERBATIM
 )
