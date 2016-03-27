@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011 Samsung Electronics Co., Ltd All Rights Reserved
+ * Copyright (c) 2011 - 2016 Samsung Electronics Co., Ltd All Rights Reserved
  *
  * Licensed under the Apache License, Version 2.0 (the License);
  * you may not use this file except in compliance with the License.
@@ -36,16 +36,12 @@ static const char* mime_type_error_to_string(mime_type_error_e error)
 	switch (error) {
 	case MIME_TYPE_ERROR_NONE:
 		return "NONE";
-
 	case MIME_TYPE_ERROR_INVALID_PARAMETER:
 		return "INVALID_PARAMETER";
-
 	case MIME_TYPE_ERROR_OUT_OF_MEMORY:
 		return "OUT_OF_MEMORY";
-
 	case MIME_TYPE_ERROR_IO_ERROR:
 		return "IO_ERROR";
-
 	default:
 		return "UNKNOWN";
 	}

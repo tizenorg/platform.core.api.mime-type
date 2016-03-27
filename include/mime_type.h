@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011 Samsung Electronics Co., Ltd All Rights Reserved
+ * Copyright (c) 2011 - 2016 Samsung Electronics Co., Ltd All Rights Reserved
  *
  * Licensed under the Apache License, Version 2.0 (the License);
  * you may not use this file except in compliance with the License.
@@ -11,7 +11,7 @@
  * distributed under the License is distributed on an AS IS BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License. 
+ * limitations under the License.
  */
 
 #ifndef __TIZEN_CONTENT_MIME_TYPE_H__
@@ -33,8 +33,7 @@ extern "C"
 /**
  * @brief Enumeration of error code
  */
-typedef enum
-{
+typedef enum {
 	MIME_TYPE_ERROR_NONE = TIZEN_ERROR_NONE, /**< Successful */
 	MIME_TYPE_ERROR_INVALID_PARAMETER = TIZEN_ERROR_INVALID_PARAMETER, /**< Invalid parameter */
 	MIME_TYPE_ERROR_OUT_OF_MEMORY = TIZEN_ERROR_OUT_OF_MEMORY, /**< Out of memory */
